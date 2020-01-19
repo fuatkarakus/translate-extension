@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>__MSG_optionsPageTitle__</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+<body>
+  <p class="title">__MSG_optionsTitle__</p>
+  <form>
+    <table>
+      <tr>
+        <td class="col1 no-border help" colspan=3>
+	         <span class="icon icon-help">__MSG_optionsNoteForEncounteringMultipleLanguage__</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="col1 no-border help" colspan=3>
+           <span class="icon icon-keyboard">__MSG_optionsNoteForKeyboardShortcut__</span>
+           <p>__MSG_optionsNoteForKeyboardShortcutTranslate__: Ctrl+Shift+1</p>
+           <p>__MSG_optionsNoteForKeyboardShortcutTTS__: Ctrl+Shift+2</p>
+           <p>__MSG_optionsNoteForKeyboardShortcutTranslatePage__: Ctrl+Shift+3</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          __MSG_optionsSelectedDomainCaption__
+        </td>
+        <td class="col2">
+          <label>__MSG_optionsSelectedDomainGlobal__ <input type="radio" value="global" name="selectedDomain" required></label>
+        </td>
+        <td class="col3">
+          <label>__MSG_optionsSelectedDomainChina__ <input type="radio" value="china" name="selectedDomain" required></label>
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          __MSG_optionsOpenModeCaption__
+        </td>
+        <td class="col2">
+          <label>__MSG_optionsOpenModeModal__ <input type="radio" value="modal" name="openMode" required></label>
+        </td>
+        <td class="col3">
+          <label>__MSG_optionsOpenModeNewTab__ <input type="radio" value="newTab" name="openMode" required></label>
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          __MSG_optionsTTCaption__
+        </td>
+        <td class="col2">
+          <label>__MSG_optionsPageLang__ <select class="select-lang" name="pageLang" id="pageLang" required></select></label>
+        </td>
+        <td class="col3">
+          <label>__MSG_optionsUserLang__ <select class="select-lang" name="userLang" id="userLang" required></select></label>
+        </td>
+        <td>
+          <label><input type="checkbox" name="enableTT" id="enableTT"> __MSG_optionsEnableTT__</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          __MSG_optionsTTSCaption__
+        </td>
+        <td class="col2">
+          <select class="select-lang" name="ttsLang" id="ttsLang" required></select>
+        </td>
+        <td class="col3"></td>
+        <td>
+          <label><input type="checkbox" name="enableTTS" id="enableTTS"> __MSG_optionsEnableTTS__</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          __MSG_optionsTPCaption__
+        </td>
+        <td class="col2">
+          <label>__MSG_optionsTPPageLang__ <select class="select-lang" name="tpPageLang" id="tpPageLang" required></select></label>
+        </td>
+        <td class="col3">
+          <label>__MSG_optionsTPUserLang__ <select class="select-lang" name="tpUserLang" id="tpUserLang" required></select></label>
+        </td>
+        <td>
+          <label><input type="checkbox" name="enableTP" id="enableTP"> __MSG_optionsEnableTP__</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="col1 no-border">
+          <button type="submit" class="button">__MSG_optionsSubmit__</button>
+        </td>
+        <td class="col2 no-border"></td>
+        <td class="col3 no-border"></td>
+      </tr>
+    </table>
+  </form>
+  <div id="message"></div>
+  <script src="../l10n.js"></script>
+  <script src="../config.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

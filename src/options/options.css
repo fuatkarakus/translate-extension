@@ -1,0 +1,94 @@
+body {
+    color: #333;
+}
+
+.help {
+    color: #666;
+}
+
+.icon {
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+}
+
+.icon-help {
+    background-image: url('../../icons/help.png');
+}
+
+.icon-keyboard {
+    background-image: url('../../icons/keyboard.png');
+}
+
+table {
+    width: 100%;
+    border: 1px solid #d7d7db !important;
+}
+
+td {
+    border-bottom: 1px solid #d7d7db !important;  
+}
+
+td {
+    padding: 10px;
+}
+
+.no-border {
+    border-style: none !important;
+}
+
+.col1 {
+    width: 30%;
+    max-width: 300px;
+}
+
+.col2 {
+    text-align: right;
+    width: 20%;
+    max-width: 200px;   
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.button, input {
+    border-radius: 0px;
+    border-color: #aaa;
+    border-width: 1px;
+}
+
+input {
+    border-style: solid;
+    background-color: white;
+    padding: 0.5em 0em;
+    width: 3em;
+    text-align: center;
+}
+
+.select-lang{
+    width: 12em;
+}
+
+.button {
+    border-style: hidden;
+    background-color: rgb(76, 175, 80);
+    padding: 0.5em 3em;
+    color: white;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 20px #aaa;
+}
+
+#message {
+    display: none;
+    border-style: solid;
+    border-color: rgb(255, 235, 59);
+    border-width: 2px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 204);
+    text-align: center;
+    line-height: 2.5;
+}

@@ -1,0 +1,34 @@
+
+/* Eleman | https://extensionworkshop.com/documentation/develop/debugging/ */
+
+.modal {
+  /* display: block; */
+  display: -webkit-box;
+  width: 25%;
+  height: 83%;
+}
+
+/* modal.css | moz-extension://b09700eb-bcaa-ba45-a943-50d5c59f430f/src/content/modal.css */
+
+.modal {
+  /* padding-top: 100px; */
+  /* top: auto; */
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.48);
+}
+
+.modal-content {
+  /* position: relative; */
+  /* background-color: #fefefe; */
+  /* margin: auto; */
+  /* padding: 0; */
+  /* border: 1px solid #888; */
+  /* width: 80%; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  width: 100%;
+}
+
+.modal-header {
+  display: none;
+}

@@ -1,0 +1,4 @@
+build
+**/l10n.js
+web-ext-artifacts/.DS_Store
+.DS_Store
