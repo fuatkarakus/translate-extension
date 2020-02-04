@@ -8,17 +8,28 @@ document.addEventListener('mouseup', function (e) {
   if (selection) {
     if (selection.length >= 2) {
       // console.log("clientX: " + e.clientX + ", clientX: " + e.clientY);
-      console.log("selection : " + selection);
+      // console.log("selection : " + selection);
       renderBubble(e.pageX + 3, e.pageY + 3, selection);
       console.log("content loaded");
-      document.querySelector('.selection_bubble')
-        .addEventListener('click', clickHandler, false);
     }
   }
 }, false);
 
+// document.addEventListener('mousedown', function (e) {
+//   console.log("mause down");
+//   bubbleDOM.style.visibility = 'hidden';
+// }, false);
+
+document.querySelector('.selection_bubble').addEventListener('click', function(e) {
+  var selection = window.getSelection().toString();
+  chrome.runtime.sendMessage({action: 'openModal', selection: selection});
+  bubbleDOM.style.visibility = 'hidden';
+  console.log("clicked");
+}, false);
+
+
 function clickHandler(){
-  chrome.runtime.sendMessage({action: 'showModal'});
+  chrome.runtime.sendMessage({action: 'openModal'});
   bubbleDOM.style.visibility = 'hidden';
   console.log("clicked");
 }
