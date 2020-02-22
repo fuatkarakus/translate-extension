@@ -106,16 +106,10 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     }
     if (request.action === 'openModal') {
         console.log(" action neymis: " +request.selection);
-        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-            let tab = tabs[0];
-            let config = Config.config;
-            let selectionText = request.selection;
-            chrome.tabs.executeScript({code: "window.getSelection().toString();"}, function (selection) {
-                let selectedText = selection[0] || "";
-                console.log( "bune lan: " + selectedText);
-                openTranslate(config.translateURL + encodeURIComponent(selectionText), tab);
-            });
-        });
+        let tab = sender.tab;
+        let config = Config.config;
+        let selectionText = request.selection;
+        openTranslate(config.translateURL + encodeURIComponent(selectionText), tab);
     }
 });
 

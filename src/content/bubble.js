@@ -1,7 +1,7 @@
 var bubbleDOM = document.createElement('div');
 bubbleDOM.setAttribute('class', 'selection_bubble');
 document.body.appendChild(bubbleDOM);
-
+var globalSelection;
 // Lets listen to mouseup DOM events. 
 document.addEventListener('mouseup', function (e) {
   var selection = window.getSelection().toString();
@@ -10,7 +10,8 @@ document.addEventListener('mouseup', function (e) {
       // console.log("clientX: " + e.clientX + ", clientX: " + e.clientY);
       // console.log("selection : " + selection);
       renderBubble(e.pageX + 3, e.pageY + 3, selection);
-      console.log("content loaded");
+      globalSelection = selection;
+      console.log("selection :  " + globalSelection);
     }
   }
 }, false);
@@ -21,12 +22,10 @@ document.addEventListener('mouseup', function (e) {
 // }, false);
 
 document.querySelector('.selection_bubble').addEventListener('click', function(e) {
-  var selection = window.getSelection().toString();
-  chrome.runtime.sendMessage({action: 'openModal', selection: selection});
+  chrome.runtime.sendMessage({action: 'openModal', selection: globalSelection});
   bubbleDOM.style.visibility = 'hidden';
-  console.log("clicked");
+  console.log("bubble selection: " + globalSelection);
 }, false);
-
 
 function clickHandler(){
   chrome.runtime.sendMessage({action: 'openModal'});
