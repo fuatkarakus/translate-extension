@@ -22,7 +22,6 @@ function checkSelectionText(event) {
   setTimeout(function() {
     selection = getSelectionText();
     if (selection) {
-      console.log("checkSelectionText");
       document.querySelector('.selection_bubble').style.top = (event.pageY+3) + "px";
       document.querySelector('.selection_bubble').style.left = (event.pageX+3) + "px";
       document.querySelector('.selection_bubble').style.visibility = 'visible';
@@ -35,7 +34,6 @@ function checkSelectionText(event) {
 document.querySelector('.selection_bubble').addEventListener("click", openPopup);
 
 function openPopup(event) {
-  console.log( "openPopup " + selection);
   chrome.runtime.sendMessage({action: 'openModal', selection: selection});
   document.querySelector('.selection_bubble').style.visibility = 'hidden';
   
