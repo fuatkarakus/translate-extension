@@ -1,11 +1,11 @@
-## To Google Translate
+## Translate Extension
 ### Introduction
  
-This extension creates a context menu item in the browser, when you click on a menu item, the current page url, link or the previously selected text is sent to Google Translate. You can also setup default language in the option page.
+This extension open a bubble that can you click on when you select a text on the page and show a iframe of the google translate in your browser page. It is similar to the google translate extension.
 
 ### How to use
 #### Changing the default language
-First you should change the default language settings by accessing to about:addons > To Google Translate option page.
+First you should change the default language settings by accessing to about:addons > Translate Extension option page.
 
 ### Testing out the extension
 You can test the extension in Firefox with *web-ext*. *web-ext* can be installed with the Node Package Manager.
