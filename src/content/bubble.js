@@ -21,7 +21,7 @@ function checkSelectionText(event) {
 
   setTimeout(function () {
     selection = getSelectionText();
-    if (selection) {
+    if (selection.length >= 3) {
       document.querySelector(".selection_bubble").style.top =
         event.pageY + 3 + "px";
       document.querySelector(".selection_bubble").style.left =
