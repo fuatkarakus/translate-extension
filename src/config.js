@@ -1,7 +1,9 @@
 class Config {
 
     constructor(loadConfig = true, ready_cb = null) {
+        console.log("config load");
         if (loadConfig) {
+            console.log("config load");
             Config.loadConfig().then(() => {
                 if (ready_cb && typeof ready_cb === "function") {
                     ready_cb(Config.config);
@@ -25,7 +27,7 @@ class Config {
             'enableTTS': true,
             'enableTP': true,
             'selectedDomain': 'global',
-            'openMode': 'modal',
+            'openMode': 'newTab',
             'gtDomain': Config.getGoogleTranslatorDomain(),
             'translateURL': `https://${defaultDomain}/?sl=auto&tl=${defaultLanguage}&text=`,
             'ttsURL': `https://${defaultDomain}/translate_tts?ie=UTF-8&total=1&idx=0&client=tw-ob&tl=en-US&q=`,

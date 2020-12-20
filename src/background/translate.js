@@ -105,7 +105,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         chrome.tabs.create({url: request.url});
     }
     if (request.action === 'openModal') {
-        console.log(" action neymis: " +request.selection);
+        console.log(" action -->  : " +request.selection);
         let tab = sender.tab;
         let config = Config.config;
         let selectionText = request.selection;
@@ -121,6 +121,7 @@ chrome.runtime.onInstalled.addListener(function (info) {
 
 function openTranslate(url, tab, fullscreen = false) {
     if (Config.config.openMode === "modal") {
+        console.log( "open url ---> ", url);
         chrome.tabs.sendMessage(tab.id, {
             url: url,
             fullscreen: fullscreen
