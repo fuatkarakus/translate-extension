@@ -1,9 +1,7 @@
 class Config {
 
     constructor(loadConfig = true, ready_cb = null) {
-        console.log("config load");
         if (loadConfig) {
-            console.log("config load");
             Config.loadConfig().then(() => {
                 if (ready_cb && typeof ready_cb === "function") {
                     ready_cb(Config.config);
